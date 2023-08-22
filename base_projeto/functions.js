@@ -13,7 +13,7 @@ function newTask()
     let input = document.getElementById('input-new-task')
     input.style.border = ''
 
-    // validation
+   
     if(!input.value)
     {
         input.style.border = '1px solid red'
@@ -25,7 +25,7 @@ function newTask()
     }
     else
     {
-        // increment to localStorage
+       
         let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
         values.push({
             name: input.value
@@ -46,7 +46,7 @@ function showValues() {
   
     for (let i = 0; i < values.length; i++) {
       let taskName = values[i]['name'];
-      let doneClass = values[i]['done'] ? 'done' : ''; // Adiciona uma classe 'done' se a tarefa estiver concluída
+      let doneClass = values[i]['done'] ? 'done' : ''; 
   
       list.innerHTML += `
         <li>
@@ -72,18 +72,18 @@ function showValues() {
       values.splice(index, 1);
       localStorage.setItem(localStorageKey, JSON.stringify(values));
       showValues();
-      updateProgressBar(); // Atualiza a barra de progresso após remover a tarefa
+      updateProgressBar(); 
     }
   }
-function taskDone(data) {
+  function taskDone(data) {
     let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
     let index = values.findIndex(x => x.name === data);
-    
+  
     if (index !== -1) {
-      values[index].done = true; // Adiciona uma propriedade "done" ao item
+      values[index].done = !values[index].done; 
       localStorage.setItem(localStorageKey, JSON.stringify(values));
       showValues();
-      updateProgressBar(); // Atualiza a barra de progresso após marcar a tarefa como concluída
+      updateProgressBar(); 
     }
   }
 
@@ -103,8 +103,7 @@ function updateProgressBar() {
     }
   }
   
-  // Chame essa função sempre que houver uma alteração nas tarefas
-  // Por exemplo, após marcar uma tarefa como concluída ou remover uma tarefa
+ 
   updateProgressBar();
 
   function showMessage() {
@@ -137,10 +136,10 @@ function updateProgressBar() {
   function removeCompletedTasks() {
     let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
     
-    // Filtra as tarefas que não estão marcadas como concluídas
+   
     let remainingTasks = values.filter(task => !task.done);
     
     localStorage.setItem(localStorageKey, JSON.stringify(remainingTasks));
-    showValues(); // Atualiza a interface após remover as tarefas concluídas
-    updateProgressBar(); // Atualiza a barra de progresso
+    showValues(); 
+    updateProgressBar(); 
   }
