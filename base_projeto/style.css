@@ -135,6 +135,23 @@ input[type='submit']{
     border-radius: 20px;
     height: 35px;
     width: 35px;
+    }
+  #btn-done:hover {
+    transform: scale(1.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  #btn-modal {
+    background-color: #de6c5c;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 20px;
+    height: 35px;
+    width: 35px;
+  }
+  #btn-modal:hover {
+    transform: scale(1.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
 
   #btn-ok{
@@ -145,6 +162,10 @@ input[type='submit']{
     border-radius: 20px;
     height: 35px;
     width: 35px;
+  }
+  #btn-ok:hover {
+    transform: scale(1.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   #to-do-list li span {
     word-break: break-word;
