@@ -176,11 +176,12 @@ input[type='submit']{
   
   .button {
     padding: 10px 20px;
-    margin: 10 10px;
+    margin: 10 8px;
     background-color:#de6c5c;
     color: rgb(0, 0, 0);
-    border: none;
+    border: solid black 1px;
     border-radius: 9px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
   }
@@ -203,7 +204,7 @@ input[type='submit']{
       border-radius: 13px;
       opacity: 0; /* Começa com opacidade 0 para o efeito de fade in */
       transition: opacity 0.8s ease;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
   }
 
   .message2 {
@@ -217,7 +218,7 @@ input[type='submit']{
     border-radius: 13px;
     opacity: 0; /* Começa com opacidade 0 para o efeito de fade in */
     transition: opacity 0.8s ease;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .message3 {
@@ -231,7 +232,7 @@ input[type='submit']{
     border-radius: 13px;
     opacity: 0; /* Começa com opacidade 0 para o efeito de fade in */
     transition: opacity 0.8s ease;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
 

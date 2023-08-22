@@ -133,3 +133,14 @@ function updateProgressBar() {
       message.style.opacity = "0"; 
     }, 1500); 
   }
+
+  function removeCompletedTasks() {
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
+    
+    // Filtra as tarefas que não estão marcadas como concluídas
+    let remainingTasks = values.filter(task => !task.done);
+    
+    localStorage.setItem(localStorageKey, JSON.stringify(remainingTasks));
+    showValues(); // Atualiza a interface após remover as tarefas concluídas
+    updateProgressBar(); // Atualiza a barra de progresso
+  }
