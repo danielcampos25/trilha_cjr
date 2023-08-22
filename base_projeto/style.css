@@ -7,7 +7,7 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background-color: #908f8f;
+    background-color: #bbbbbbc9;
     padding:10px;
     display: flex;
     flex-direction: column;
@@ -222,6 +222,20 @@ input[type='submit']{
   }
 
   .message3 {
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:rgba(255, 0, 0, 0.664);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 13px;
+    opacity: 0; /* Começa com opacidade 0 para o efeito de fade in */
+    transition: opacity 0.8s ease;
+    font-size: 1.2rem;
+  }
+
+  .message4 {
     position: fixed;
     bottom: 50%;
     left: 50%;

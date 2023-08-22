@@ -35,14 +35,17 @@
                         <ol id="to-do-list"></ol>
                     </div>
                     <div class="button-bar">
-                        <button class="button">Tudo</button>
-                        <button class="button" onclick="">Pendentes</button>
-                        <button class="button">Completas</button>
+                        <button class="button" onclick=" showValues()">Tudo</button>
+                        <button class="button" onclick="showIncompleteTasks()">Pendentes</button>
+                        <button class="button" onclick="showCompletedTasks()">Completas</button>
                         <button class="button" onclick= "removeCompletedTasks()">Limpar completas</button>
                       </div>
                       <div class="message1" id="message1">Tarefa adicionada</div>
                       <div class="message2" id="message2">Ops! Essa tarefa ja existe</div>
                       <div class="message3" id="message3">Escreva uma tarefa válida!</div>
+                      <div class="message4" id="message4">Não há tarefas feitas para serem removidas!</div>
+                      <div id="custom-modal" class="modal">
+                        
                 
                 
         </div>
