@@ -27,16 +27,24 @@
                     <input type="text" name="" placeholder="Nova tarefa" id="input-new-task">
                     <input type="submit" value="Adicionar" onclick="newTask()" id="btn-new-task"> 
                 </div>
+                <div class="progress-bar">
+                    <div class="filler"></div>
+                </div>
                 <div class="content--body">
                     <div class="box">
                         <ol id="to-do-list"></ol>
                     </div>
-                </div>
+                    <div class="button-bar">
+                        <button class="button">Tudo</button>
+                        <button class="button">Pendentes</button>
+                        <button class="button">Completas</button>
+                        <button class="button">Limpar completas</button>
+                      </div>
+                      <div class="message1" id="message1">Tarefa adicionada</div>
+                      <div class="message2" id="message2">Ops! Essa tarefa ja existe</div>
+                      <div class="message3" id="message3">Escreva uma tarefa válida!</div>
                 
-                <div class="progress-bar">
-                    <div class="filler"></div>
-                </div>
-            
+                
         </div>
     </div>
 </body>

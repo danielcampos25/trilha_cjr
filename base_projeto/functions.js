@@ -17,11 +17,11 @@ function newTask()
     if(!input.value)
     {
         input.style.border = '1px solid red'
-        alert('Digite uma tarefa para inserir em sua lista!')
+        showMessageError2()
     }
     else if(validateIfExistsNewTask())
     {
-        alert('Atenção! Já existe uma tarefa com essa descrição.')
+        showMessageError1()
     }
     else
     {
@@ -32,9 +32,11 @@ function newTask()
         })
         localStorage.setItem(localStorageKey,JSON.stringify(values))
         showValues()
+        showMessage()
     }
     input.value = ''
     updateProgressBar();
+    
 }
 
 function showValues() {
@@ -104,3 +106,30 @@ function updateProgressBar() {
   // Chame essa função sempre que houver uma alteração nas tarefas
   // Por exemplo, após marcar uma tarefa como concluída ou remover uma tarefa
   updateProgressBar();
+
+  function showMessage() {
+    var message = document.getElementById("message1");
+    message.style.opacity = "1"; 
+    
+    setTimeout(function() {
+      message.style.opacity = "0"; 
+    }, 1500); 
+  }
+
+  function showMessageError1() {
+    var message = document.getElementById("message2");
+    message.style.opacity = "1"; 
+    
+    setTimeout(function() {
+      message.style.opacity = "0"; 
+    }, 1500); 
+  }
+
+  function showMessageError2() {
+    var message = document.getElementById("message3");
+    message.style.opacity = "1"; 
+    
+    setTimeout(function() {
+      message.style.opacity = "0"; 
+    }, 1500); 
+  }
